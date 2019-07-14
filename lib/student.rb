@@ -82,10 +82,8 @@ class Student
     LIMIT 1
     SQL
 
-    row = DB[:conn].execute(sql)
-    first_student = self.new_from_db(row)
-    binding.pry
-    first_student
+    row = DB[:conn].execute(sql).first
+    self.new_from_db(row)
   end
 
   def save
