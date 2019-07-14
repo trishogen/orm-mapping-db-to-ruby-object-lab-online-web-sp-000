@@ -17,7 +17,7 @@ class Student
       SELECT *
       FROM songs
     SQL
- 
+
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
     end
