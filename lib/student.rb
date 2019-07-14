@@ -83,7 +83,8 @@ class Student
     SQL
 
     row = DB[:conn].execute(sql)
-    self.new_from_db(row)
+    first_student = self.new_from_db(row)
+    first_student
   end
 
   def save
